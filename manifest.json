@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "图片快捷复制",
+  "version": "0.2.0",
+  "description": "鼠标指向网页图片，按 ⌘C / Ctrl+C 复制图片；保留文字和输入框的正常复制，无悬浮按钮。",
+  "permissions": ["clipboardWrite"],
+  "host_permissions": ["http://*/*", "https://*/*"],
+  "background": {"service_worker": "background.js"},
+  "action": {"default_title": "图片快捷复制：指向图片，按 ⌘C / Ctrl+C"},
+  "content_scripts": [{
+    "matches": ["http://*/*", "https://*/*"],
+    "js": ["core.js", "content.js"],
+    "run_at": "document_start",
+    "all_frames": true,
+    "match_about_blank": true
+  }]
+}

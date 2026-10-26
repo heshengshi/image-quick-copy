@@ -1,0 +1,11 @@
+{
+  "name": "image-quick-copy",
+  "version": "0.2.0",
+  "private": true,
+  "description": "Hover over an image and press Command+C / Ctrl+C to copy a PNG in Chrome.",
+  "license": "MIT",
+  "engines": { "node": ">=22" },
+  "scripts": {
+    "test": "node --check core.js && node --check content.js && node --check background.js && node --test tests/core.test.cjs"
+  }
+}
